@@ -27,4 +27,4 @@ As seguintes ferramentas foram usadas na construção do projeto:
 ### Autor
 ---
 
-Feito com ❤️ por Nicolas Brian 👋🏽 Entre em contato!
+Feito com ❤️ por Nicolas Brian 👋🏽 
