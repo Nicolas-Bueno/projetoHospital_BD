@@ -112,3 +112,87 @@ VALUES('DEFAULT','Paracetamol, anti-alergico','1','Tomar de 8 em 8 horas', '1'),
 ('DEFAULT','Paracetamol, anti-inflamatorio', '2', 'Tomar os remédios de 12 em 12h', '27'),
 ('DEFAULT','Antibiotico, antidiarreico', '2', 'Tomar os remédios de 8 em 8h', '13'),
 ('DEFAULT','Dipirona, anti-inflamatorio', '2', 'Tomar dipirona quando da febre e tomar o anti-inflamatorio de 8 em 8h','5');
+
+/*******************************
+* Registrar tipo quartos
+*/
+INSERT INTO tipo_quarto VALUES(DEFAULT,'Horario de visita ilimitado, cama para acompanhante','270'),
+(DEFAULT,'Leitos para dois pacientes com acompanhante e horario de visita marcado', '150'),
+(DEFAULT, 'Vários leitos sem acompanhante (exceto para idosos), com hora de visita marcado','100');
+
+/*******************************
+* Registrar tipo quartos
+*/
+INSERT INTO quarto 
+VALUES(DEFAULT, '33', 'Apartamento', '1'),
+(DEFAULT, '22', 'Quarto duplo', '2'),
+(DEFAULT, '11', 'Enfermaria', '3');
+
+/*******************************
+* Registrar enfermeiros
+*/
+INSERT INTO enfermeiro
+VALUES(DEFAULT, 'Breno Melo','67860976005', '854519'),
+(DEFAULT, 'Tania Mara','14603572050', '854519'),
+(DEFAULT, 'Jose Maria','80704702088', '854519'),
+(DEFAULT, 'Claudia Romano','35654160095', '854519'),
+(DEFAULT, 'Pedro Barros','08700778052', '854519'),
+(DEFAULT, 'Bruno Herrique','92623850054', '854519'),
+(DEFAULT, 'Gabriela Martins','93694623094', '854519'),
+(DEFAULT, 'Luana Vasconcelos','21473216052', '854519'),
+(DEFAULT, 'Maria Fernanda','79277567023', '854519'),
+(DEFAULT, 'Ana Abreu','64933028036', '854519');
+
+/*******************************
+* Registrar enfermeiros
+*/
+INSERT INTO internacao(data_entrada, data_prev_auta, data_alta, procedimento, quarto_id, paciente_id, medicos_id)
+VALUES ('2020-02-05', '2020-02-16', '2020-02-13', 'Cirurgia no joelho', '2', '22', '4');
+
+INSERT INTO internacao(data_entrada, data_prev_auta, data_alta, procedimento, quarto_id, paciente_id, medicos_id)
+VALUES('2015-08-30','2015-09-08','2015-09-09','Pocedimento no estomago','1','27','5');
+
+INSERT INTO internacao(data_entrada, data_prev_auta, data_alta, procedimento, quarto_id, paciente_id, medicos_id)
+VALUES('2018-10-05','2018-10-20','2018-10-20','Procedimento de hernia','2','27','5');
+
+INSERT INTO internacao(data_entrada, data_prev_auta, data_alta, procedimento, quarto_id, paciente_id, medicos_id)
+VALUES('2020-11-10','2020-11-10','2020-11-10','Remoção de pinta','3','30','3');
+
+INSERT INTO internacao(data_entrada, data_prev_auta, data_alta, procedimento, quarto_id, paciente_id, medicos_id)
+VALUES('2021-01-10','2021-01-10','2021-01-10','Correção de cicatriz','3','24','3');
+
+INSERT INTO internacao(data_entrada, data_prev_auta, data_alta, procedimento, quarto_id, paciente_id, medicos_id)
+VALUES('2021-06-13','2021-06-20','2021-06-20','Cirurgia na perna','3','17','1');
+
+INSERT INTO internacao(data_entrada, data_prev_auta, data_alta, procedimento, quarto_id, paciente_id, medicos_id)
+VALUES('2015-07-22','2015-08-01','2015-08-03','Cirurgia no tornozelo','1','30','2');
+
+/*******************************
+* Associar enfermeiros as internações
+*/
+INSERT INTO internacao_enfermeiro
+VALUES(DEFAULT,'1','2'),
+(DEFAULT,'7','2'),
+(DEFAULT,'10','2'),
+
+(DEFAULT,'2','3'),
+(DEFAULT,'4','3'),
+(DEFAULT,'5','3'),
+
+(DEFAULT,'9','4'),
+(DEFAULT,'10','4'),
+(DEFAULT,'3','4'),
+
+(DEFAULT,'6','5'),
+(DEFAULT,'7','5'),
+
+(DEFAULT,'8','6'),
+(DEFAULT,'2','6'),
+
+(DEFAULT,'8','7'),
+(DEFAULT,'9','7'),
+(DEFAULT,'5','7'),
+
+(DEFAULT,'10','8'),
+(DEFAULT,'3','8'),
+(DEFAULT,'1','8');
