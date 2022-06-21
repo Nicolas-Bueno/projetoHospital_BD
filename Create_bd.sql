@@ -5,8 +5,7 @@ CREATE TABLE convenio (
 id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 nome VARCHAR(255) NOT NULL,
 cnpj VARCHAR(45),
-carencia CHAR(1),
-numero VARCHAR(45)
+carencia CHAR(1)
 );
 
 CREATE TABLE pacientes (
@@ -82,13 +81,6 @@ tipo_quarto_id INT NOT NULL,
 FOREIGN KEY (tipo_quarto_id) REFERENCES tipo_quarto(id)
 );
 
-CREATE TABLE internacao_infermeiro (
-id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-id_enfermeiro INT NOT NULL,
-id_internacao INT NOT NULL,
-FOREIGN KEY (id_enfermeiro) REFERENCES enfermeiro(id),
-FOREIGN KEY (id_internacao) REFERENCES internacao(id)
-);
 
 CREATE TABLE enfermeiro (
 id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -113,13 +105,11 @@ FOREIGN KEY (paciente_id) REFERENCES pacientes(id),
 FOREIGN KEY (medicos_id) REFERENCES medicos(id)   
 );
 
-
-
-
-
-
-
-
-
-
+CREATE TABLE internacao_enfermeiro (
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+id_enfermeiro INT NOT NULL,
+id_internacao INT NOT NULL,
+FOREIGN KEY (id_enfermeiro) REFERENCES enfermeiro(id),
+FOREIGN KEY (id_internacao) REFERENCES internacao(id)
+);
 
