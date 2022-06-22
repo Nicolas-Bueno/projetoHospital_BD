@@ -15,3 +15,8 @@ UPDATE internacao SET data_alta='2021-01-13' WHERE id=6;
 UPDATE internacao SET data_alta='2020-11-13' WHERE id=5;
 
 /* excluir o último convênio cadastrado e todas as consultas realizadas com esse convênio*/
+
+UPDATE pacientes SET convenio_id=3 WHERE convenio_id=4;
+DELETE FROM receitas WHERE consultas_id IN (5,18,21);
+DELETE FROM consultas WHERE convenio_id=4;
+DELETE FROM convenio WHERE id=4;
