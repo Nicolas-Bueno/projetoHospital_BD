@@ -10,20 +10,21 @@
 <p align="center">
  <a href="#objetivo">Objetivo</a> •
  <a href="#tecnologias">Tecnologias</a> • 
- <a href="#contribuicao">Contribuição</a> • 
- <a href="#autor">Autor</a>
+ <a href="#autor">Autor</a> 
 </p>
 
 <h4 align="center"> 
 	🚧 Em construção...  🚧
 </h4>
 
+### Objetivo
+- O hospital necessita de um sistema para sua área clínica que ajude a controlar consultas realizadas. Os médicos têm seus dados pessoais cadastrados em planilhas digitais. Alguns registros antigos ainda estão em formulário de papel, mas será necessário incluir esses dados no novo sistema.
+
 ### 🛠 Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
 - Mysql
-- Sql
 
 ### Autor
 ---
