@@ -1,10 +1,10 @@
 # Database Hospital
 
 ## Descrição do Projeto
-<p align="center">Um banco de dados para um hospital que ajuda a controlar consultas realizadas, receitas e internações</p>
+<p align="center">Um banco de dados para um hospital que ajuda a controlar registros de consultas realizadas, pacientes, receitas e internações</p>
 
 <h1 align="center">
-    <a href="https://pt-br.reactjs.org/">🔗 Mysql</a>
+    <a href="https://pt-br.mysql.org/">🔗 Mysql</a>
 </h1>
 
 <p align="center">
