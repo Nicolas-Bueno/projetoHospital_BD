@@ -66,12 +66,21 @@ ORDER BY C.data;
 /*Nome do paciente, nome do médico, data da internação e procedimentos das internações
 realizadas por médicos da especialidade “gastroenterologia”, 
 que tenham acontecido em “enfermaria”.*/
+INSERT INTO internacao(data_entrada, data_prev_auta, data_alta, procedimento, quarto_id, paciente_id, medicos_id)
+VALUES('2016-11-30','2016-12-05','2016-12-06','Pocedimento no estomago','3','24','7');
 
-SELECT P.nome, M.nome, I.data_entrada, I.procedimento, E.especialidade, Q.tipo
-FROM internacao I JOIN pacientes P ON(I.paciente_id=P.id)
-JOIN medicos M ON(I.medicos_id=M.id)
-JOIN quarto Q on(I.quarto_id=Q.id),
-medicos_especialidades ME JOIN especialidades E ON (ME.especialidades_id=E.id)
+INSERT INTO internacao(data_entrada, data_prev_auta, data_alta, procedimento, quarto_id, paciente_id, medicos_id)
+VALUES('2015-07-04','2015-07-10','2015-07-08','Pocedimento no estomago','3','22','9');
+
+INSERT INTO internacao(data_entrada, data_prev_auta, data_alta, procedimento, quarto_id, paciente_id, medicos_id)
+VALUES('2017-02-28','2017-03-05','2017-03-06','Pocedimento no estomago','3','30','9');
+
+SELECT P.nome , M.nome , I.data_entrada , I.procedimento , E.especialidade , Q.tipo
+FROM internacao I JOIN pacientes P ON (I.paciente_id =P.id)
+JOIN medicos M ON (I.medicos_id = M.id)
+JOIN quarto Q on (I.quarto_id = Q.id)
+JOIN medicos_especialidades ME ON (ME.medicos_id=M.id)
+JOIN especialidades E ON (ME.especialidades_id = E.id)
 WHERE E.especialidade = 'Gastroenterologista' and Q.tipo = 'Enfermaria'
 ORDER BY I.data_entrada;
 
