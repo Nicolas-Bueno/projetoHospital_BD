@@ -21,7 +21,7 @@
 ### Descrição
 <p align="center">Um banco de dados para um hospital que ajuda a controlar registros de consultas realizadas, pacientes, receitas e internações.</p>
 
-- No projeto foi criado um diagrama de entidade e relacionamento, para projetar o banco de dados. Nesse modelo relacional, podemos ter os seguintes níveis de
+- No projeto foi criado um diagrama de entidade e relacionamento, para projetar o banco de dados. Nesse modelo relacional, tem os seguintes níveis de
 relacionamento: 1:N, N:N, 1:1.
 
 - Nesse projeto foi utilizado CREATE DATABASE e CREATE TABLE para criar o banco de dados e criar as tabelas, para povoar as tabelas o INSERT INTO para
